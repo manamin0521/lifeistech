@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Favorite Artists</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/favoriteartist.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</head>
+<header>
+  <nav class="navbar navbar-default">
+   <div class="navbar-header">
+    <h2 class="navbar-brand"><a href="/">　My favorite Artists</a></h2>
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gnavi">
+      <span class="sr-only">メニュー</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    </div>
+    <div id="gnavi" class="collapse navbar-collapse">
+     <ul class="nav navbar-nav navbar-right">
+      <li style="padding: 15px 30px 0 0;"><h4>♩<a href="/userpage/<%=session[:user]%>"><%=User.find(session[:user]).name %></a></h4></li>
+      <li style="padding: 10px 20px 0 0;"><a href="/form">新規追加</a></li>
+      <li style="padding: 10px 20px 0 0;"><a href="/signout">ログアウト</a></li>
+     </ul>
+   </div>
+   </nav>
+ </header>
+<body>
+     <div class="container">
+      <div class="panel panel-default">
+     <div class="panel-body" class="panel">
+      <h3>更新</h3>
+  <form action="/renew/<%= @artist.id %>" method="post">
+      <dl>
+      <dt>artist name</dt>
+      <dd><input type="text" name="name" value="<%= @artist.name %>"></dd>
+      <dt>PR</dt>
+      <dd><textarea name="body" cols="40" rows="2" value="<%= @artist.body %>"></textarea></dd>
+      <br><br>
+     <dt>おすすめ曲1</dt>
+     <dd><input type="text" name="song1" value="<%= @artist.song1 %>"></dd>
+     <dt>PR</dt>
+     <dd><textarea name="songpr1" cols="40" rows="2" value="<%= @artist.songpr1 %>"></textarea></dd>
+     <dt>YouTube</dt>
+     <dd><input type="text" name="youtube1" value="<%= @artist.youtube1 %>"></dd>
+     <br>
+     <dt>おすすめ曲2</dt>
+     <dd><input type="text" name="song2" value="<%= @artist.song2 %>"></dd>
+     <dt>PR</dt>
+     <dd><textarea name="songpr2" cols="40" rows="2" value="<%= @artist.songpr2 %>"></textarea></dd>
+     <dt>YouTube</dt>
+     <dd><input type="text" name="youtube2" value="<%= @artist.youtube2 %>"></dd>
+     <br>
+     <dt>おすすめ曲3</dt>
+     <dd><input type="text" name="song3" value="<%= @artist.song3 %>"></dd>
+     <dt>PR<dt>
+     <dd><textarea name="songpr3" cols="40" rows="2" value="<%= @artist.songpr3 %>"></textarea></dd>
+     <dt>YouTube</dt>
+     <dd><input type="text" name="youtube3" value="<%= @artist.youtube3 %>"></dd>
+     <br>
+     <dt>おすすめ曲4</dt>
+     <dd><input type="text" name="song4" value="<%= @artist.song4 %>"></dd>
+     <dt>PR</dt>
+     <dd><textarea name="songpr4" cols="40" rows="2" value="<%= @artist.song4 %>"></textarea></dd>
+     <dt>YouTube</dt>
+     <dd><input type="text" name="youtube4" value="<%= @artist.youtube4 %>"></dd>
+     <br>
+     <dt>おすすめ曲5</dt>
+     <dd><input type="text" name="song5" value="<%= @artist.song5 %>"></dd>
+     <dt>PR</dt>
+     <dd><textarea name="songpr5" cols="40" rows="2" value="<%= @artist.songpr5 %>"></textarea></dd>
+     <dt>YouTube</dt>
+     <dd><input type="text" name="youtube5" value="<%= @artist.youtube5 %>"></dd>
+     
+     <br><br>
+     <dt>アルバム1</dt>
+     <dd><input type="text" name="album1" value="<%= @artist.album1 %>"></dd>
+     <dt>ALBUM PR<dt>
+    <dd><textarea name="albumpr1" cols="40" rows="2" value="<%= @artist.albumpr1 %>"></textarea></dd>
+     <br>
+     <dt>アルバム2</dt>
+     <dd><input type="text" name="album2" value="<%= @artist.album2 %>"></dd>
+     <dt>ALBUM PR</dt>
+     <dd><textarea name="albumpr2" cols="40" rows="2" value="<%= @artist.albumpr2 %>"></textarea></dd>
+     <br>
+     <dt>アルバム3</dt>
+     <dd><input type="text" name="album3" value="<%= @artist.album3 %>"></dd>
+     <dt>ALBUM PR<dt>
+     <dd><textarea name="albumpr3" cols="40" rows="2" value="<%= @artist.albumpr3 %>"></textarea></dd>
+     <br>
+     <dd><input type="submit" value="編集完了"></dd>
+     </dl>
+    </form>
+    </div>
+    </div>
+    </div>
+</body>
+</html>

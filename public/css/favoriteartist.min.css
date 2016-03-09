@@ -1,0 +1,32 @@
+/*dl{*/
+/*    padding-top : 50px;*/
+/*    padding-left: 50px;*/
+/*}*/
+
+
+dd{
+    margin-left:9rem;
+    margin-top:-2rem;
+}
+
+body{
+  background: url(https://farm4.staticflickr.com/3724/10155904916_8b1f4eff3b_b.jpg) center center / cover no-repeat fixed;
+}
+
+.panel {
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 10px; /* CSS3 */
+　-webkit-border-radius: 10px; /* Safari,Google Chrome用 */
+　-moz-border-radius: 10px; /* Firefox用 */
+}
+
+.dropdown:hover > .dropdown-menu{
+  display: block;
+}
+a{
+display: inline-block;
+}
+
+textarea {
+    resize: both;
+}
